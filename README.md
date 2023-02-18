@@ -1,4 +1,3 @@
-# Calculator App
- Javascript Pocket Calculator App
+# Calculator-Brainnest-Week-4
 
- Run index.html to start app
+https://benibry.github.io/Calculator-Brainnest-Week-4/

@@ -1,67 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+html {
+    font-size: 150%;
+    font-weight: 300;
+    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
 body {
-  margin: 0;
-  padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./Images/pexels-dmitry-demidov-3800468.jpg);
+    background-size: cover;
+
 }
 
-#calculator {
-  background-color: #555555;
-  border-radius: 10px;
-  padding: 10px;
-  width: 300px;
+
+/* Calculator */
+
+.calculator {
+    box-shadow: 0.625rem 0.313rem 0.313rem rgba(0, 0, 0, 0.681);
+    border-radius: 0.25em;
+    overflow: hidden;
 }
 
-#display {
-  background-color: #b9d37c;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  height: 50px;
-  text-align: right;
-  font-size: 24px;
+.calculator__display {
+    background-color: #302e29;
+    color: #a05019;
+    padding: 0.75rem 1rem;
+    text-align: right;
+    font-size: calc(1rem * .9 * .9);
+    min-height: 3em;
 }
 
-#display div {
-  line-height: 150%;
-  padding-right: 5px;
+.calculator__display div{
+    min-height: 1.5em;
 }
 
-#buttons {
-  width: 100%;
-  padding: 0;
+.calculator__keys {
+    background-color: #302e29;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 0.0625em;
+    grid-template-areas:
+        ". . . . "
+        ". . . . "
+        "seven eight nine backspace"
+        "four five six clear"
+        "one two three all_clear"
+        "zero decimal negate equal";
 }
 
-#buttons button {
-  background-color: #777777;
-  color: white;
-  border: 2px #777777 solid;
-  border-radius: 4px;
-  width: 22%;
-  margin-bottom: 5px;
-  margin-right: 2%;
+.calculator__keys>button {
+    border: 0;
+    min-height: 50px;
+    min-width: 75px;
+    padding: auto auto;
+    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+
 }
 
-#buttons button:focus {
-  outline: none;
+
+.one {
+    grid-area: one;
 }
 
-#buttons button:active {
-  background-color: #333333;
+.two {
+    grid-area: two;
 }
 
-#buttons button:last-child {
-  margin-right: 1px;
+.three {
+    grid-area: three;
 }
 
-#buttons #bottom_rows {
-  box-sizing: border-box;
-  float: left;
-  width: 76%;
+.four {
+    grid-area: four;
 }
 
-#buttons #bottom_rows button {
-  width: 28.95167%;
-  margin-right: 2.5%;
+.five {
+    grid-area: five;
 }
 
-#buttons #add {
-  height: 48px;
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+.decimal {
+    grid-area: decimal;
+}
+
+.backspace {
+    grid-area: backspace;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.negate {
+    grid-area: negate;
+    color: #f4f3e7;
+    background-image: linear-gradient(46deg, #7d807c, #697068);
+}
+
+.negate:hover,
+.negate:focus {
+    background-image: linear-gradient(46deg, #697068, #7d807c);
+}
+
+.all_clear {
+    grid-area: all_clear;
+}
+
+.equals {
+    grid-area: equal;
+    background-image: linear-gradient(46deg, #f4f3e7, #b1b0a6);
+}
+
+.equals:hover,
+.equals:focus {
+    background-image: linear-gradient(46deg, #b1b0a6, #f4f3e7);
+}
+
+.decimal {
+    background-image: linear-gradient(46deg, #7d807c, #697068);
+    color: #f4f3e7;
+}
+
+.decimal:hover,
+.decimal:focus {
+    background-image: linear-gradient(46deg, #697068, #7d807c);
+}
+
+
+.operator {
+    background-image: linear-gradient(46deg, #f4f3e7, #b1b0a6);
+    color: #302e29;
+}
+
+
+.operator:hover,
+.operator:focus {
+    background-image: linear-gradient(46deg, #b1b0a6, #f4f3e7);
+}
+
+.clear,
+.all_clear,
+.backspace {
+    background-image: linear-gradient(46deg, #d88c4d, #d87a2d);
+    color: #f4f3e7;
+}
+
+.clear:hover,
+.clear:focus,
+.all_clear:hover,
+.all_clear:focus,
+.backspace:hover,
+.backspace:focus {
+    background-image: linear-gradient(46deg, #d87a2d, #d88c4d);
+}
+
+.number {
+    background-image: linear-gradient(46deg, #7d807c, #697068);
+    color: #f4f3e7;
+}
+
+.number:hover,
+.number:focus {
+    background-image: linear-gradient(46deg, #697068, #7d807c);
 }
